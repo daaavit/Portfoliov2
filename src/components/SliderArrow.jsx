@@ -5,6 +5,7 @@ import {
   OpenContact,
 } from "../styles/SliderArrow.Styles";
 import InfoCardMobile from "./InfoCardMobile";
+import AboutCardMobile from './AboutCardMobile'
 
 const SliderArrow = () => {
 
@@ -23,19 +24,26 @@ const SliderArrow = () => {
   
   const SecondDots = () => (secondOpenIndex % 2 === 0 ? "•••" : 'X');
 
-  const ToBeShown = () => {
+  const InfoCard = () => {
     return(
       <InfoCardMobile />
+    )
+  }
+
+  const AboutCard = () => {
+    return(
+      <AboutCardMobile />
     )
   }
 
 
   return (
     <>
-    {openIndex % 2 === 1  ? <ToBeShown /> : null }
+    {openIndex % 2 === 1  ? <InfoCard /> : null }
+    {secondOpenIndex % 2 === 1  ? <AboutCard /> : null }
     <SliderArrowWrapper>
       <OpenMenu onClick={() => { AddIndex();}}> {dots()} </OpenMenu>
-      <OpenContact onClick={AddSecondIndex}> {SecondDots()} </OpenContact>
+      <OpenContact onClick={AddSecondIndex}>{SecondDots()}</OpenContact>
     </SliderArrowWrapper>
     </>
   );
