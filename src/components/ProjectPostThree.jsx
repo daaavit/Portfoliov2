@@ -75,7 +75,7 @@ const ProjectPostTwo = () => {
         </TextArea>
         <ProjectImg
           src={calculator}
-          onClick={(e) => window.open("https://lift-bruh.vercel.app/")}
+          onClick={(e) => window.open("https://calculator-ochre-five.vercel.app/")}
         />
       </TextAndProjectBox>
       <LikeAndCommentArea>

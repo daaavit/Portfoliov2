@@ -5,7 +5,6 @@ export const InfoWrapper = styled.div`
     display: flex;
     position: absolute;
     top: 20px;
-    align-self: flex-start;
     flex-direction: column;
     align-items: center;
     height: 90%;
