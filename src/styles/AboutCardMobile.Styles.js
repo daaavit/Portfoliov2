@@ -15,11 +15,11 @@ export const AboutWrapper = styled.div`
 
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.7px);
+    backdrop-filter: blur(15.7px);
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(249, 253, 255, 0.24);
     
-    max-height: 1000px;
+    // max-height: 1000px;
     max-width: 380px;
     
     margin: 2em 0% 0% 2%;
@@ -29,9 +29,9 @@ export const AboutWrapper = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
-        z-index:8000;
+        z-index:9000;
         margin: 0%;
-        
+
         animation: AboutWrapper 2s ease 0s 1 normal forwards;
 
         @keyframes AboutWrapper {
