@@ -9,7 +9,7 @@ export const AboutWrapper = styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;
-
+    top: 200px;
     height: 90%;
     width: 25%;
 
@@ -30,8 +30,8 @@ export const AboutWrapper = styled.div`
         align-items: center;
         width: 100%;
         z-index:8000;
-        top: 50px;
         margin: 0%;
+        
         animation: AboutWrapper 2s ease 0s 1 normal forwards;
 
         @keyframes AboutWrapper {
