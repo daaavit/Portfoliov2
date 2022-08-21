@@ -16,7 +16,7 @@ export const AboutWrapper = styled.div`
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15.7px);
-    -webkit-backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(10.7px);
     border: 1px solid rgba(249, 253, 255, 0.24);
     
     // max-height: 1000px;
