@@ -70,15 +70,22 @@ export const ThreeDotBox = styled.div`
    
 
 `
-export const Dots = styled.div`
+export const MainDots = styled.div`
     display: flex;
     color: lightgray;
+    justify-content: center;
     height: 100%;
     width: 100%;
     font-size: 1.5em;
     justify-content: flex-end;
-    margin: 3% 5% 0% 0%
+    margin: 3% 5% 0% 0%;
 
+    @media(max-width: 750px) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+   
   
 
 

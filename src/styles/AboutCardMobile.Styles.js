@@ -9,7 +9,7 @@ export const AboutWrapper = styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 200px;
+    top: 50px;
     height: 90%;
     width: 25%;
 
@@ -26,8 +26,8 @@ export const AboutWrapper = styled.div`
 
     @media(max-width: 750px) {
         display: flex;
-        justify-content: center;
         align-items: center;
+        height: 100%;
         width: 100%;
         z-index:9000;
         margin: 0%;
@@ -152,7 +152,7 @@ export const FormWrapper = styled.form`
     
     @media(max-width: 500px){
         display: flex;
-        height: 90vh;
+        height: 80%;
         width: 90vw;
 
 }

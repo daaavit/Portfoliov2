@@ -13,7 +13,7 @@ import {
   PostPastTimeWithEarthBox,
   Planet,
   Hours,
-  Dots,
+  MainDots,
   TextArea,
   LikeAndCommentArea,
   AmountOfLikesBox,
@@ -83,7 +83,7 @@ const Post = () => {
             </NameAndTitleBox>
           </ProfileAndNameBox>
           <ThreeDotBox>
-            <Dots>• • •</Dots>
+            <MainDots>• • •</MainDots>
           </ThreeDotBox>
         </PicWithDotArea>
         <TextArea>
