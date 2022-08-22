@@ -27,7 +27,7 @@ export const OpenMenu = styled.div`
     cursor: pointer;
     font-size: 1em;
 
-    animation: OpenMenu 2s ease 0s infinite normal forwards;
+    animation: OpenMenu 2s ease 0s 5 normal forwards;;
 
     @keyframes OpenMenu {
         0%,
@@ -75,7 +75,7 @@ export const OpenContact = styled.div`
     cursor: pointer;
     font-size: 1em;
 
-    animation: OpenMenu 2s ease 0s infinite normal forwards;
+    animation: OpenMenu 2s ease 0s 5 normal forwards;
 
     @keyframes OpenMenu {
         0%,
