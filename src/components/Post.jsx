@@ -62,7 +62,15 @@ const Post = () => {
     }, []);
     return size;
   };
+  
   const [height, width] = useWindowSize();
+
+  const [likeAmount, setLikeAmount] = useState(11033)
+
+  const likeAmountHandler = () => {
+    setLikeAmount(likeAmount + 1)
+  }
+
 
   return (
     <PostBox>
@@ -108,12 +116,12 @@ const Post = () => {
               <Celebrate src={Clap} />
               <Love src={Heart} />
             </LikeIcons>
-            <LikeAmount>11,033</LikeAmount>
+            <LikeAmount>{likeAmount.toLocaleString('en-US')}</LikeAmount>
           </AmountOfLikesBox>
           <AmountOfCommentBox>790 comments • 120 share</AmountOfCommentBox>
         </LikeAndCommentArea>
         <Action>
-          <LikeBox>
+          <LikeBox  onClick={likeAmountHandler}>
             <LikeIcon /> <LikeText>Like</LikeText>
           </LikeBox>
           <CommentBox>

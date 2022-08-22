@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import {
   PostBox,
   PostWrapper,
@@ -47,6 +47,15 @@ import Heart from "../assets/Heart.svg";
 import Project from "../assets/MacCertify.png";
 
 const ProjectPost = () => {
+
+  const [likeAmount, setLikeAmount] = useState(18073)
+
+  const likeAmountHandler = () => {
+    setLikeAmount(likeAmount + 1)
+  }
+
+
+
   return (
     <PostWrapper>
       <PicWithDotArea>
@@ -82,12 +91,12 @@ const ProjectPost = () => {
             <Celebrate src={Clap} />
             <Love src={Heart} />
           </LikeIcons>
-          <LikeAmount>18,073</LikeAmount>
+          <LikeAmount>{likeAmount.toLocaleString('en-US')}</LikeAmount>
         </AmountOfLikesBox>
         <AmountOfCommentBox>1429 comments • 320 share</AmountOfCommentBox>
       </LikeAndCommentArea>
       <Action>
-        <LikeBox>
+        <LikeBox onClick={likeAmountHandler}>
           <LikeIcon /> <LikeText>Like</LikeText>
         </LikeBox>
         <CommentBox>

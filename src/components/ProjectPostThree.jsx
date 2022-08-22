@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import {
   PostBox,
   PostWrapper,
@@ -46,6 +46,13 @@ import Heart from "../assets/Heart.svg";
 import calculator from "../assets/Calculator.png";
 
 const ProjectPostTwo = () => {
+  const [likeAmount, setLikeAmount] = useState(14340)
+
+  const likeAmountHandler = () => {
+    setLikeAmount(likeAmount + 1)
+  }
+
+
   return (
     <PostWrapper>
       <PicWithDotArea>
@@ -85,12 +92,12 @@ const ProjectPostTwo = () => {
             <Celebrate src={Clap} />
             <Love src={Heart} />
           </LikeIcons>
-          <LikeAmount>14,340</LikeAmount>
+          <LikeAmount>{likeAmount.toLocaleString('en-US')}</LikeAmount>
         </AmountOfLikesBox>
         <AmountOfCommentBox>525 comments • 341 share</AmountOfCommentBox>
       </LikeAndCommentArea>
       <Action>
-        <LikeBox>
+        <LikeBox onClick={likeAmountHandler}>
           <LikeIcon /> <LikeText>Like</LikeText>
         </LikeBox>
         <CommentBox>
