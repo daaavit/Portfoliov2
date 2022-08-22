@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import {
   PostBox,
   PostWrapper,
@@ -37,8 +37,7 @@ import {
   LikeBox,
   CommentBox,
   ShareBox,
-  SendBox
-
+  SendBox,
 } from "../styles/ProjectPost.Styles";
 import ProfilePic from "../assets/mypic.png";
 import Clap from "../assets/Clap.svg";
@@ -47,14 +46,11 @@ import Heart from "../assets/Heart.svg";
 import Project from "../assets/MacCertify.png";
 
 const ProjectPost = () => {
-
-  const [likeAmount, setLikeAmount] = useState(18073)
+  const [likeAmount, setLikeAmount] = useState(18073);
 
   const likeAmountHandler = () => {
-    setLikeAmount(likeAmount + 1)
-  }
-
-
+    setLikeAmount(likeAmount + 1);
+  };
 
   return (
     <PostWrapper>
@@ -76,13 +72,16 @@ const ProjectPost = () => {
           <Dots>• • •</Dots>
         </ThreeDotBox>
       </PicWithDotArea>
-      <TextAndProjectBox >
+      <TextAndProjectBox>
         <TextArea>
-          Here is my one of lastest project you can take look here:
-          CertifyMyAuto.com Created React website for PPI vehicle
-          inspection where licensed mechanics and buyers can connect.
+          Here is my one of lastest project you can scroll down or click on
+          project. Created React website for Pre-Purchase vehicle inspection
+          where licensed mechanics and buyers can connect.
         </TextArea>
-        <ProjectImg src={Project} onClick={(e) => window.open('https://certifymyauto.com')} />
+        <ProjectImg
+          src={Project}
+          onClick={(e) => window.open("https://certifymyauto.com")}
+        />
       </TextAndProjectBox>
       <LikeAndCommentArea>
         <AmountOfLikesBox>
@@ -91,7 +90,7 @@ const ProjectPost = () => {
             <Celebrate src={Clap} />
             <Love src={Heart} />
           </LikeIcons>
-          <LikeAmount>{likeAmount.toLocaleString('en-US')}</LikeAmount>
+          <LikeAmount>{likeAmount.toLocaleString("en-US")}</LikeAmount>
         </AmountOfLikesBox>
         <AmountOfCommentBox>1429 comments • 320 share</AmountOfCommentBox>
       </LikeAndCommentArea>
@@ -110,7 +109,6 @@ const ProjectPost = () => {
         </SendBox>
       </Action>
     </PostWrapper>
-    
   );
 };
 

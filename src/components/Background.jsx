@@ -21,7 +21,6 @@ const Background = () => {
     setFlipToggle((current) => !current);
   };
 
-  console.log(isActive);
 
   return (
     <>

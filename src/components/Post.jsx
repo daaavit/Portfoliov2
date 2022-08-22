@@ -62,7 +62,7 @@ const Post = () => {
     }, []);
     return size;
   };
-  
+
   const [height, width] = useWindowSize();
 
   const [likeAmount, setLikeAmount] = useState(11033)
@@ -71,6 +71,7 @@ const Post = () => {
     setLikeAmount(likeAmount + 1)
   }
 
+  console.log("Hey Mr.Inspector :) If you have a questions please reach me at daavit@yahoo.com")
 
   return (
     <PostBox>
