@@ -26,7 +26,7 @@ export const Toggle = styled(Switch)`
   transform: ${props => props.scale};
 
   @media(max-width: 750px){
-      top: 8.7%;
+      top: 9.5%;
       left: 45%;
   }
 
