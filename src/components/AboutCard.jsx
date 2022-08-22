@@ -22,8 +22,9 @@ import {
   LinkedInIcon,
   LinkedinText,
 } from "../styles/AboutCard.Styles";
+import Background from '../components/Background'
 
-const AboutCard = () => {
+const AboutCard = ( ) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -44,7 +45,9 @@ const AboutCard = () => {
       );
     e.target.reset();
   };
-  return (
+
+
+    return (
     <AboutWrapper>
       <ResumeBox
         onClick={(evnet) =>

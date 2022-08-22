@@ -12,7 +12,6 @@ const Home = () => {
         <InfoCard />
         <Post />
         <AboutCard />
-          
     </HomeWrapper>
   );
 };

@@ -21,6 +21,8 @@ export const AboutWrapper = styled.div`
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(249, 253, 255, 0.24);
     
+    background: ${props => props.backGround};
+
     max-height: 1000px;
     max-width: 380px;
     
@@ -284,5 +286,59 @@ export const LinkedinText = styled.div`
     color: white;
     font-size: 1.3em;
     font-weight: bold;
+
+`
+
+export const TextForStars = styled.div`
+    display: flex;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: lightgray;
+
+`
+
+
+export const StarActivationArea = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 15%;
+        width: 90%;
+
+
+
+`
+
+export const ActivateStars = styled.button`
+    dipslay: flex;
+    font-size: 1.2em;
+    height: 30%;
+    width: 30%;
+    background-color: #FFC007;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 16px;
+
+:hover {
+    box-shadow: inset 0 100px 0 0 #49AD61;
+    -webkit-transition: ease-out 0.8s;
+    -moz-transition: ease-out 0.8s;
+     transition: ease-out 0.8s;
+  }
+
+  @media (max-width: 750px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 40%;
+    max-height: 4000px;
+    margin: 0;
+   
+}
 
 `
