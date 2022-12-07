@@ -100,7 +100,7 @@ const Post = () => {
             onInit={(typewriter, speed) => {
               typewriter
                 .typeString(
-                  " Hi, I’m a full-stack web developer specializing in building and designing web platforms from scratch. Currently I’m open for any opportunity which includes full time job or side projects for small or big business. Please do not hesitate and contact me for any questions its FREE:)"
+                  " Hi, thank you for your interest in my services. I specialize in full-stack web development and have experience building and designing custom web applications from the ground up. If you are interested in discussing potential opportunities, please feel free to reach out to me with any questions or inquiries. I am available for both full-time jobs and side projects for businesses of all sizes. Thank you!"
                 )
                 .pauseFor(0)
                 .start();
