@@ -44,6 +44,7 @@ import Heart from "../assets/Heart.svg";
 import ProjectPost from "../components/ProjectPost";
 import ProjectPostTwo from "../components/ProjectPostTwo";
 import ProjectPostThree from "../components/ProjectPostThree";
+import ProjectVinDigits from "../components/ProjectVinDigits";
 import Typewriter from "typewriter-effect";
 import SliderArrow from "../components/SliderArrow";
 
@@ -136,6 +137,7 @@ const Post = () => {
           </SendBox>
         </Action>
       </PostWrapper>
+      <ProjectVinDigits />
       <ProjectPost />
       <ProjectPostTwo />
       <ProjectPostThree />

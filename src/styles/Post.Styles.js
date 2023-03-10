@@ -13,7 +13,7 @@ export const PostBox = styled.div`
     // margin-left
     align-items: center;
     max-width: 750px;
-    max-height: 2550px;
+    max-height: 3000px;
 
     @media(max-width: 750px) {
         display: flex;
@@ -40,6 +40,8 @@ export const PostWrapper = styled.div`
     max-width: 550px;
 
     margin: 2em 0% 0% 2%;
+
+    // background-color: red;
 
 `
 
@@ -175,9 +177,9 @@ export const TextArea = styled.div`
     display: flex;
     height: 50%;
     width: 100%;
-    font-size: 1em;
+    font-size: 0.9em;
     letter-spacing: 0.1em;
-    line-height: 1.7em;
+    line-height: 1.5em;
     color: lightgray;
     align-items: center;
     justfy-content: center;

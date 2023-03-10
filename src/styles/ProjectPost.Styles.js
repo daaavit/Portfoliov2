@@ -25,6 +25,7 @@ export const PostWrapper = styled.div`
         display: flex;
         height: 20%;
     }
+
     
 
 `
