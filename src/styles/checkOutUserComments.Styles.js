@@ -29,8 +29,8 @@ export const UserCommentTImeBox = styled.div`
 
 export const CommentData = styled.div`
     display: flex;
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: 70%;
     color: white;
     overflow-y: auto;
     overflow-x: hidden;
@@ -73,5 +73,21 @@ export const UserName = styled.div`
     }
 
 `
+export const UserTimeStamp = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+    font-size: 0.8em;
+    color: white;
+`
 
 
+export const UserTimeAndCommentBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+
+`

@@ -74,6 +74,8 @@ const Post = () => {
   const {userComment, setUserComment} = useContext(ActualUserComments);
   const [seeComments, setSeeComments] = useState(false);
 
+  const timestamp = new Date().getTime();
+
   const likeAmountHandler = () => {
     setLikeAmount(likeAmount + 1);
   };
