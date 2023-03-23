@@ -13,7 +13,7 @@ export const PostBox = styled.div`
     // margin-left
     align-items: center;
     max-width: 750px;
-    max-height: 3000px;
+    max-height: 3400px;
 
     @media(max-width: 750px) {
         display: flex;
@@ -28,7 +28,7 @@ export const PostWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 45%;
+    height: 50%;
     width: 100%;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@ export const PostWrapper = styled.div`
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(249, 253, 255, 0.24);
 
-    max-height: 350px;
+    max-height: 400px;
     max-width: 550px;
 
     margin: 2em 0% 0% 2%;
@@ -221,6 +221,7 @@ export const AmountOfCommentBox = styled.div`
         width: 50%;
         color: lightgray;
         font-size: 1em;
+        cursor: pointer;
 
         @media(max-width: 750px) {
             display: flex;
@@ -305,6 +306,31 @@ export const Action = styled.div`
 
 `
 
+export const CommentingBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 95%;
+
+`
+export const CommentingArea = styled.input`
+        display: flex;
+        height: 80%;
+        width: 90%;
+        background: transparent;
+        border: none;
+        color: white;
+        &::placeholder {
+            color: white;
+            font-size: 1.2em;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            text-align: center;
+          }
+
+`
+
 export const LikeIcon = styled(Like)`
     display: flex;
     height: 100%;
@@ -382,6 +408,8 @@ export const CommentBox =styled.div`
     }
 
 `
+
+
 
 export const ShareBox =styled.div`
     display: flex;

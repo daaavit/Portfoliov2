@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 import {
   PostBox,
   PostWrapper,
@@ -36,6 +36,8 @@ import {
   CommentText,
   ShareText,
   SendText,
+  CommentingBox,
+  CommentingArea,
 } from "../styles/Post.Styles";
 import ProfilePic from "../assets/mypic.png";
 import Clap from "../assets/Clap.svg";
@@ -47,9 +49,10 @@ import ProjectPostThree from "../components/ProjectPostThree";
 import ProjectVinDigits from "../components/ProjectVinDigits";
 import Typewriter from "typewriter-effect";
 import SliderArrow from "../components/SliderArrow";
+import { OpenCommentContext, ActualUserComments } from "../context/context";
+import CheckOutUserComments from "../components/CheckOutUserComments";
 
 const Post = () => {
-  
   const useWindowSize = () => {
     const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
     useEffect(() => {
@@ -65,23 +68,53 @@ const Post = () => {
   };
 
   const [height, width] = useWindowSize();
-
-  const [likeAmount, setLikeAmount] = useState(11033)
+  const { openComment, setOpenComment } = useContext(OpenCommentContext);
+  const [likeAmount, setLikeAmount] = useState(11033);
+  const [commentsQuantity, setCommentsQuantity] = useState(790);
+  const {userComment, setUserComment} = useContext(ActualUserComments);
+  const [seeComments, setSeeComments] = useState(false);
 
   const likeAmountHandler = () => {
-    setLikeAmount(likeAmount + 1)
-  }
+    setLikeAmount(likeAmount + 1);
+  };
 
-  console.log("Hey Mr.Inspector :) If you have a questions please reach me at daavit@yahoo.com")
+  const userCommentHandler = (e) => {
+    setUserComment(e.target.value);
+  };
+
+  const CommentingHandler = () => {
+    setOpenComment(true);
+    setSeeComments(false);
+  };
+
+  const handleCommentKeyDown = (e) => {
+    if (e.key === "Enter") {
+      if (userComment.trim() !== "") {
+        setOpenComment(false);
+        setCommentsQuantity(commentsQuantity + 1);
+        userComment("");
+      }
+    }
+  };
+
+  const seeCommentsHandler = () => {
+    setSeeComments(!seeComments);
+    setOpenComment(false);
+  };
+
+
+  console.log(
+    "Hey Mr.Inspector :) If you have a questions please reach me at daavit@yahoo.com"
+  );
 
   return (
     <PostBox>
-     {width < 750 ? <SliderArrow/> : null}
+      {width < 750 ? <SliderArrow /> : null}
       <PostWrapper>
         <PicWithDotArea>
           <ProfileAndNameBox>
             <ProfileImgArea>
-              <ProfileImage src={ProfilePic}  />
+              <ProfileImage src={ProfilePic} />
             </ProfileImgArea>
             <NameAndTitleBox>
               <Name>Davit Khutsishvili</Name>
@@ -118,24 +151,39 @@ const Post = () => {
               <Celebrate src={Clap} />
               <Love src={Heart} />
             </LikeIcons>
-            <LikeAmount>{likeAmount.toLocaleString('en-US')}</LikeAmount>
+            <LikeAmount>{likeAmount.toLocaleString("en-US")}</LikeAmount>
           </AmountOfLikesBox>
-          <AmountOfCommentBox>790 comments • 120 share</AmountOfCommentBox>
+          <AmountOfCommentBox onClick={seeCommentsHandler}>
+            {commentsQuantity} comments • 120 share
+          </AmountOfCommentBox>
         </LikeAndCommentArea>
-        <Action>
-          <LikeBox  onClick={likeAmountHandler}>
-            <LikeIcon /> <LikeText>Like</LikeText>
-          </LikeBox>
-          <CommentBox>
-            <CommentIcon /> <CommentText>Comment</CommentText>
-          </CommentBox>
-          <ShareBox>
-            <ShareIcon /> <ShareText>Share</ShareText>
-          </ShareBox>
-          <SendBox>
-            <SendIcon /> <SendText>Send</SendText>
-          </SendBox>
-        </Action>
+        {openComment ? (
+          <CommentingBox>
+            <CommentingArea
+              onKeyDown={handleCommentKeyDown}
+              onChange={userCommentHandler}
+              placeholder="  Write a comment..."
+            ></CommentingArea>
+          </CommentingBox>
+        ) : seeComments ? (
+          <CheckOutUserComments />
+        ) : (
+          <Action>
+            <LikeBox onClick={likeAmountHandler}>
+              <LikeIcon /> <LikeText>Like</LikeText>
+            </LikeBox>
+            <CommentBox>
+              <CommentIcon />{" "}
+              <CommentText onClick={CommentingHandler}>Comment</CommentText>
+            </CommentBox>
+            <ShareBox>
+              <ShareIcon /> <ShareText>Share</ShareText>
+            </ShareBox>
+            <SendBox>
+              <SendIcon /> <SendText>Send</SendText>
+            </SendBox>
+          </Action>
+        )}
       </PostWrapper>
       <ProjectVinDigits />
       <ProjectPost />
