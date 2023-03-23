@@ -7,7 +7,7 @@ import {SendPlane} from '@styled-icons/remix-fill/SendPlane'
 
 export const PostBox = styled.div`
     display: flex;
-    height: 350vh;
+    height: 5000vh;
     width: 50%;
     flex-direction: column;
     // margin-left
@@ -18,7 +18,7 @@ export const PostBox = styled.div`
     @media(max-width: 750px) {
         display: flex;
         width: 90%;
-        max-height: 2900px;
+        max-height: 3500px;
     }
 
 `
@@ -49,6 +49,7 @@ export const PicWithDotArea = styled.div`
     display: flex;
     height: 25%;
     width: 100%;
+    min-height: 100px;
 `
 export const ProfileAndNameBox = styled.div`
     display: flex;
@@ -209,6 +210,8 @@ export const AmountOfLikesBox = styled.div`
         align-items: center;
         height: 100%;
         width: 50%;
+
+       
 
 
 `
