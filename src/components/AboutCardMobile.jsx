@@ -49,7 +49,7 @@ const AboutCardMobile = () => {
       <ResumeBox
         onClick={(evnet) =>
           window.open(
-            "https://docs.google.com/document/d/1SKnk6pOiLUFIyHa21xIP2D93i9rNYnIyHCG5HYarsRY/edit"
+            "https://docs.google.com/document/d/13fqqVPb9xsKN2BaQM8dVIH4o8Mo5qSZh/edit?usp=sharing&ouid=109933782849656790928&rtpof=true&sd=true"
           )
         }
       >
@@ -58,7 +58,7 @@ const AboutCardMobile = () => {
         </ResumeArea>
         <TextForResume>
           <FileName>Davit_Resume.DOCX</FileName>
-          <LastUpdated>Last updated on 8/18/2022</LastUpdated>
+          <LastUpdated>Last updated on 3/29/2023</LastUpdated>
         </TextForResume>
       </ResumeBox>
       <EmailHeadingArea>

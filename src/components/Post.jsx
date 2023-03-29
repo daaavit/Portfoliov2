@@ -67,28 +67,44 @@ const Post = () => {
     return size;
   };
 
+  // State to get the window size.
   const [height, width] = useWindowSize();
+
+  // Accessing the OpenCommentContext to manage the commenting state.
   const { openComment, setOpenComment } = useContext(OpenCommentContext);
+
+  // State to manage the like amount.
   const [likeAmount, setLikeAmount] = useState(11033);
+
+  // State to manage the comments quantity.
   const [commentsQuantity, setCommentsQuantity] = useState(790);
-  const {userComment, setUserComment} = useContext(ActualUserComments);
+
+  // Accessing the ActualUserComments context to manage user comments.
+  const { userComment, setUserComment } = useContext(ActualUserComments);
+
+  // State to manage the visibility of the comments.
   const [seeComments, setSeeComments] = useState(false);
 
+  // Get the current timestamp.
   const timestamp = new Date().getTime();
 
+  // Handler to increment the like amount.
   const likeAmountHandler = () => {
     setLikeAmount(likeAmount + 1);
   };
 
+  // Handler to update the user comment.
   const userCommentHandler = (e) => {
     setUserComment(e.target.value);
   };
 
+  // Handler to open the commenting section.
   const CommentingHandler = () => {
     setOpenComment(true);
     setSeeComments(false);
   };
 
+  // Handler to manage the comment submission by pressing the Enter key.
   const handleCommentKeyDown = (e) => {
     if (e.key === "Enter") {
       if (userComment.trim() !== "") {
@@ -99,11 +115,13 @@ const Post = () => {
     }
   };
 
+  // Handler to toggle the visibility of the comments.
   const seeCommentsHandler = () => {
     setSeeComments(!seeComments);
     setOpenComment(false);
   };
 
+  // Render
 
   console.log(
     "Hey Mr.Inspector :) If you have a questions please reach me at daavit@yahoo.com"

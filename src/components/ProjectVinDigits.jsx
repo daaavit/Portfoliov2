@@ -38,7 +38,7 @@ import {
   CommentBox,
   ShareBox,
   SendBox,
-} from "../styles/ProjectPostTwo.Styles";
+} from "../styles/ProjectVinDigits.Styles";
 import ProfilePic from "../assets/mypic.png";
 import Clap from "../assets/Clap.svg";
 import Like from "../assets/Thumbs.svg";

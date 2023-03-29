@@ -28,7 +28,7 @@ export const PostWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50%;
+    height: 55%;
     width: 100%;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

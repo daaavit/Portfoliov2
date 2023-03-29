@@ -35,6 +35,7 @@ export const CommentData = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 0.8em;
+    padding: 0.5em;
 
     ::-webkit-scrollbar {
         display: none;
@@ -49,6 +50,8 @@ export const UserIconAndUserNameBox = styled.div`
     flex-direction: column;
     height: 90%;
     width: 20%;
+
+
 `
 export const UserIcon = styled(User)`
     display: flex;
@@ -65,7 +68,7 @@ export const UserName = styled.div`
     color: white;
     height: 50%;
     width: 100%;
-    font-size: 1em;
+    font-size: 0.8em;
     
     @media (max-width: 750px) {
         display: flex;
