@@ -22,9 +22,9 @@ import {
   LinkedInIcon,
   LinkedinText,
 } from "../styles/AboutCard.Styles";
-import Background from '../components/Background'
+import Background from "../components/Background";
 
-const AboutCard = ( ) => {
+const AboutCard = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -46,13 +46,12 @@ const AboutCard = ( ) => {
     e.target.reset();
   };
 
-
-    return (
+  return (
     <AboutWrapper>
       <ResumeBox
         onClick={(evnet) =>
           window.open(
-            "https://docs.google.com/document/d/1SKnk6pOiLUFIyHa21xIP2D93i9rNYnIyHCG5HYarsRY/edit"
+            "https://docs.google.com/document/d/13fqqVPb9xsKN2BaQM8dVIH4o8Mo5qSZh/edit?usp=sharing&ouid=109933782849656790928&rtpof=true&sd=true"
           )
         }
       >
@@ -97,7 +96,11 @@ const AboutCard = ( ) => {
           <GitHubIcon />
           <GitHubText>GitHub</GitHubText>
         </GitBox>
-        <LinkedinBox onClick={(evnet) => window.open("https://www.linkedin.com/in/daavit/")} >
+        <LinkedinBox
+          onClick={(evnet) =>
+            window.open("https://www.linkedin.com/in/daavit/")
+          }
+        >
           <LinkedInIcon />
           <LinkedinText>LinkedIn</LinkedinText>
         </LinkedinBox>

@@ -65,7 +65,6 @@ export const ResumeBox = styled.div`
     border: 1px solid rgba(249, 253, 255, 0.24);
 
     cursor: pointer;
-    
     @media(max-width: 750px) { 
         display: flex;
         justify-conente: center;
