@@ -51,7 +51,7 @@ const AboutCard = () => {
       <ResumeBox
         onClick={(evnet) =>
           window.open(
-            "https://docs.google.com/document/d/13fqqVPb9xsKN2BaQM8dVIH4o8Mo5qSZh/edit?usp=sharing&ouid=109933782849656790928&rtpof=true&sd=true"
+            "https://docs.google.com/document/d/1A0hGOyUo39QmO9JB3YYysTYEofvrcv7e/edit?usp=sharing&ouid=109933782849656790928&rtpof=true&sd=true"
           )
         }
       >
